@@ -1,0 +1,89 @@
+/* Navbar.css */
+
+/* General Navbar Styles */
+.navbar {
+    background-color: #333;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Logo Styles */
+.navbar-logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Menu Icon (Hamburger) */
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin-left: 20px;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #5e81f4;
+}
+
+/* Active State for Navbar Links */
+.nav-links.active {
+    display: block;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #333;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.nav-links.active .nav-item {
+    margin: 15px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    /* Show Hamburger Menu Icon on Mobile */
+    .menu-icon {
+        display: block;
+    }
+
+    /* Hide Navbar Links by Default on Mobile */
+    .nav-links {
+        display: none;
+        width: 100%;
+    }
+}
